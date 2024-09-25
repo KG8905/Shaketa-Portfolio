@@ -1,0 +1,176 @@
+/* CSS Variables for easy theme management */
+:root {
+    --primary-color: #ff69b4; /* Hot Pink */
+    --secondary-color: #ef2c94;  /* Bright Pink */
+    --background-color: #0cb40f; /* Light Green */
+    --font-color: #fff;       /* White for text on pink background */
+    --container-width: 1200px;
+    --transition-duration: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--secondary-color); /* Bright Pink */
+    background-color: var(--background-color); /* Light Green */
+}
+
+.container {
+    width: var(--container-width);
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--primary-color); /* Hot Pink */
+    padding: 20px 0;
+}
+
+header .branding {
+    text-align: center;
+    color: var(--font-color); /* White */
+}
+
+header nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    color: var(--font-color); /* White links initially */
+    text-decoration: none;
+    transition: color var(--transition-duration);
+}
+
+.nav-links li a:hover {
+    color: var(--secondary-color); /* Bright Pink on hover */
+}
+
+/* About Section */
+.section {
+    padding: 60px 0;
+    background-color: var(--background-color); /* Light Green */
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-text {
+    max-width: 500px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background-color: var(--background-color); /* Light Green */
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-duration);
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    margin: 15px 0;
+    color: var(--secondary-color); /* Bright Pink */
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: var(--primary-color); /* Hot Pink */
+    border: 2px solid var(--primary-color);
+    padding: 10px 15px;
+    transition: background-color var(--transition-duration), color var(--transition-duration);
+}
+
+.project-card a:hover {
+    background-color: var(--primary-color); /* Hot Pink background */
+    color: var(--font-color); /* White text on hover */
+}
+
+/* Contact Section */
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    background-color: var(--primary-color); /* Hot Pink */
+    color: var(--font-color); /* White */
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition-duration);
+}
+
+form button:hover {
+    background-color: #ff1493; /* Deep Pink */
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+footer {
+    background-color: var(--primary-color); /* Hot Pink */
+    text-align: center;
+    padding: 10px;
+    color: var(--font-color); /* White */
+}
